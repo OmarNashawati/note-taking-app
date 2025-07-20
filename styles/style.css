@@ -1,9 +1,59 @@
 @import './base.css';
 
 aside {
-  width: 200px;
+  width: 220px;
   padding: 1rem ;
   border-right: 1px solid var(--border);
+}
+
+.logo{
+  padding-bottom: 1rem;
+}
+
+.aside-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem ;
+  gap: 10px;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-bottom: 5px;
+
+}
+
+.active {
+  background-color: var(--muted);
+}
+
+.active > .icon {
+  filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%) contrast(114%);
+}
+
+.notes-button-container {
+  border-bottom: 1px solid var(--border);
+}
+
+.icon {
+  display: inline-block;
+  padding: 10px;
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.home-icon {
+  background-image: url('../images/icon-home.svg');
+}
+
+.arrow-icon {
+  background-image: url('../images/icon-arrow-left.svg');
+  transform: rotate(180deg);
+  margin-left: auto;
+}
+
+.archive-icon {
+  background-image: url('../images/icon-archive.svg');
 }
 
 main {

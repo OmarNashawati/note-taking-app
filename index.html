@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,15 +46,19 @@
 
     <div class="main-container">
       <div class="nots-list-container">
-        <div class="no-notes-state">
-          <div class="create-note-button">
-            <i class="icon add-icon"></i>
-            Create New Note
-          </div>
+        <div class="create-note-button">
+          <i class="icon add-icon"></i>
+          Create New Note
+        </div>
 
-          <div class="no-notes-message">
-            <p>You don't have any notes yet. Start a new note to capture your thoughts and ideas.</p>
-          </div>
+        <div class="no-notes-message js-no-notes-message">
+          <p>You don't have any notes yet. Start a new note to capture your thoughts and ideas.</p>
+        </div>
+
+        <div class="notes js-note"> 
+
+          
+
         </div>
       </div>
 
@@ -100,5 +104,6 @@
     </div>
   </main>
   
+  <script type="module" src="./scripts/index.js"></script>
 </body>
 </html>

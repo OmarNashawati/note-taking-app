@@ -199,3 +199,27 @@ body {
 .delete-icon {
   background-image: url('../images/icon-delete.svg');
 }
+
+.hide {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* background: #e0e0e0; */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #88888821;
+  border-radius: 4px;
+  border: 2px solid transparent; /* space between thumb and track */
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}

@@ -27,7 +27,7 @@ aside {
 }
 
 .active > .icon {
-  filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%) contrast(114%);
+  filter: var(--primary-filter);
 }
 
 .notes-button-container {
@@ -43,7 +43,7 @@ main {
 
 header {
   width: 100%;
-  height: 60px;
+  height: 80px;
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -65,7 +65,13 @@ header {
 
 .note-container {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.note-content{
   padding: 1rem;
+  flex: 1 1 auto;
 }
 
 .note-options-sidebar {
@@ -103,12 +109,14 @@ header {
   flex: 1 1 auto;
   border: none;
   outline: none;
-  height: 30px;
+  background: none;
+  height: 40px;
+  color: var(--text);
 }
 
 .header-button {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +142,7 @@ header {
 }
 
 .create-note-button i {
-  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%) contrast(101%);
+  filter: var(--on-primary-filter)
 }
 
 .no-notes-message {

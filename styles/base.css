@@ -171,3 +171,7 @@ body {
 .search-icon {
   background-image: url('../images/icon-search.svg');
 }
+
+.add-icon {
+  background-image: url('../images/icon-plus.svg');
+}

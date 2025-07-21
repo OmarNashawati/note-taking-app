@@ -1,7 +1,7 @@
 @import './base.css';
 
 aside {
-  width: 220px;
+  width: 250px;
   padding: 1rem ;
   border-right: 1px solid var(--border);
 }
@@ -57,11 +57,10 @@ header {
 }
 
 .nots-list-container {
-  flex: 0 0 200px;
-  max-width: 200px;
+  flex: 0 0 250px;
   height: 100%;
   border-right: 1px solid var(--border);
-  padding: 1rem
+  padding: 1rem;
 }
 
 .note-container {
@@ -114,4 +113,34 @@ header {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+}
+
+.no-notes-state {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create-note-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px ;
+  font-size: 0.8rem;
+  border-radius: 0.5rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  cursor: pointer;
+}
+
+.create-note-button i {
+  filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%) contrast(101%);
+}
+
+.no-notes-message {
+  border-radius: 0.5rem;
+  padding: 8px;
+  font-size: 0.8rem;
+  background-color: var(--muted);
+  border: 1px solid var(--border);
 }

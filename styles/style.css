@@ -34,28 +34,6 @@ aside {
   border-bottom: 1px solid var(--border);
 }
 
-.icon {
-  display: inline-block;
-  padding: 10px;
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.home-icon {
-  background-image: url('../images/icon-home.svg');
-}
-
-.arrow-icon {
-  background-image: url('../images/icon-arrow-left.svg');
-  transform: rotate(180deg);
-  margin-left: auto;
-}
-
-.archive-icon {
-  background-image: url('../images/icon-archive.svg');
-}
-
 main {
   flex: 1 1 auto;
   display: flex;
@@ -95,4 +73,45 @@ header {
   flex: 0 0 200px;
   padding: 1rem;
   border-left: 1px solid var(--border);
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 1.5rem;
+}
+
+.header-actions-container {
+  display: flex;
+  gap: 10px;
+}
+
+.search-container {
+  width: 280px;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.search-container>input {
+  flex: 1 1 auto;
+  border: none;
+  outline: none;
+  height: 30px;
+}
+
+.header-button {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

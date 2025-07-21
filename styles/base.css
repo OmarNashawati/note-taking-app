@@ -187,3 +187,15 @@ body {
 .add-icon {
   background-image: url('../images/icon-plus.svg');
 }
+
+.clock-icon {
+  background-image: url('../images/icon-clock.svg');
+}
+
+.tags-icon {
+  background-image: url('../images/icon-tag.svg');
+}
+
+.delete-icon {
+  background-image: url('../images/icon-delete.svg');
+}

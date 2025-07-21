@@ -1,7 +1,7 @@
 @import './base.css';
 
 aside {
-  width: 250px;
+  flex: 1 0 250px;
   padding: 1rem ;
   border-right: 1px solid var(--border);
 }
@@ -50,7 +50,7 @@ header {
   border-bottom: 1px solid var(--border);
 }
 
-.main-container{
+.main-container {
   display: flex;
   flex-direction: row;
   height: 100% ;
@@ -78,6 +78,9 @@ header {
   flex: 0 0 200px;
   padding: 1rem;
   border-left: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 
@@ -151,4 +154,39 @@ header {
   font-size: 0.8rem;
   background-color: var(--muted);
   border: 1px solid var(--border);
+}
+
+.note-head {
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
+}
+
+.note-title {
+  margin-bottom: 10px;
+}
+
+.note-head-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 8px 0;
+}
+
+.note-head-row div {
+  display: flex;
+  align-items: center;
+  min-width: 100px;
+}
+
+.note-body {
+  padding: 10px 0;
+}
+
+.note-option-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  padding: 8px 12px;
 }

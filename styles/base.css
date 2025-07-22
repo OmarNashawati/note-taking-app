@@ -200,6 +200,26 @@ body {
   background-image: url('../images/icon-delete.svg');
 }
 
+.sun-icon {
+  background-image: url('../images/icon-sun.svg');
+}
+
+.font-icon {
+  background-image: url('../images/icon-font.svg');
+}
+
+.lock-icon {
+  background-image: url('../images/icon-lock.svg');
+}
+
+.logout-icon {
+  background-image: url('../images/icon-logout.svg');
+}
+
+.show {
+  display: block !important;
+}
+
 .hide {
   display: none;
 }

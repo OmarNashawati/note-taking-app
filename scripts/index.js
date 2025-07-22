@@ -23,3 +23,10 @@ getNotes().forEach(note => {
 })
 
 document.querySelector('.js-note').innerHTML = notesHTML;
+
+
+document.querySelector('.js-settings-toggle').addEventListener('click', () => {
+  
+  document.querySelector('.js-settings-dropdown').classList.toggle('show');
+
+});

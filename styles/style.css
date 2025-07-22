@@ -228,3 +228,33 @@ header {
 .note-item-last-edit {
   color: var(--muted-foreground);
 }
+
+.dropdown-settings-container{
+  position: relative;
+}
+
+.dropdown-settings {
+  display: none;
+  background: var(--background);
+  box-shadow: var(--shadow);
+  position: absolute;
+  width: 200px;
+  right: 0;
+  top: 100%;
+  border-radius: 0.5rem;
+  padding: 10px 5px;
+  z-index: 100;
+}
+
+.dropdown-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px;
+  padding: 8px 0;
+  border-radius: 0.5rem;
+}
+
+.dropdown-button:hover {
+  background-color: var(--muted);
+}

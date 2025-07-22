@@ -47,9 +47,47 @@ function renderNoteEditor(type) {
     // Editting exist note
   }
   let html = `
-  
+  <div class="note-content">
+    <div class="note-head">
+      <input type="text" class="note-input title-input" placeholder="Note Title"/>
+      <div class="note-head-row tags-container">
+        <div>
+          <i class="icon tags-icon"></i>
+          Tags
+        </div>
+        <div>
+            <input type="text" class="note-input tags-input" placeholder="add tags (e.g. Work, Planning)"/>
+        </div>
+      </div>
+      <div class="note-head-row date-container">
+        <div>
+          <i class="icon clock-icon"></i>
+          Last Edited
+        </div>
+        <div>
+          <i class="note-date">Note Saved Yet</i>
+        </div>
+      </div>
+    </div>
+    <div class="note-body">
+      <textarea 
+        class="note-input note-contnet-texterea"
+        name="note-content" 
+        id=""
+        placeholder ="Start typing your note here..." ></textarea>
+    </div>
+  </div>
+
+  <div class="note-options-sidebar">
+    <div class="note-option-button btn--primary">
+      Save
+    </div>
+    <div class="note-option-button">
+      Cancle
+    </div>
+  </div>
   `
-  document.querySelector('.js-note-container').innerHTML = noteHTML;
+  document.querySelector('.js-note-container').innerHTML = html;
 }
 
 // ################ RENDER NOTE DETAILS ON NOTE ITEM CLICKED
@@ -72,7 +110,7 @@ function renderNote (note) {
                 <i class="icon tags-icon"></i>
                 Tags
               </div>
-              <div>
+              <div class="note-tags-list">
                 ${note.tags.map(tag => tag).join(", ")}
               </div>
             </div>
@@ -105,5 +143,4 @@ function renderNote (note) {
         </div>
   `;
   document.querySelector('.js-note-container').innerHTML = noteHTML;
-
 }

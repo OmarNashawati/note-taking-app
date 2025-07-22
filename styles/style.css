@@ -1,7 +1,7 @@
 @import './base.css';
 
 aside {
-  flex: 1 0 250px;
+  flex: 0 0 250px;
   padding: 1rem ;
   border-right: 1px solid var(--border);
 }
@@ -73,6 +73,8 @@ header {
 }
 
 .note-content{
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
   flex: 1 1 auto;
 }
@@ -159,9 +161,14 @@ header {
 }
 
 .note-title {
+  font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
-
+.note-tags-list {
+  width: 100%;
+  background: red;
+}
 .note-head-row {
   display: flex;
   align-items: center;
@@ -176,6 +183,7 @@ header {
 }
 
 .note-body {
+  flex: 1 1 auto;
   padding: 10px 0;
 }
 
@@ -186,6 +194,7 @@ header {
   border: 1px solid var(--border);
   border-radius: 0.5rem;
   padding: 8px 12px;
+  cursor: pointer;
 }
 
 .notes {
@@ -257,4 +266,26 @@ header {
 
 .dropdown-button:hover {
   background-color: var(--muted);
+}
+
+.note-input {
+  border: none;
+  outline: none;
+  background-color: none;
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.title-input{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.note-contnet-texterea {
+  height:  100%;
+}
+
+.btn--primary{
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }

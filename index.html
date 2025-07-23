@@ -1,135 +1,103 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
-  <title>Note Taking app</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Note Taking app</title>
+  </head>
 
-<body>
-
-  <aside class="sidebar">
-    <div class="logo">
-      <img src="./images/logo.svg" alt="">
-    </div>
-
-    <div class="notes-button-container">
-      <div class="aside-button active">
-        <i class="icon home-icon"></i>
-        <i>All Notes</i>
-        <i class="icon arrow-icon"></i>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
       </div>
-      
-      <div class="aside-button">
-        <i class="icon archive-icon"></i>
-        <i>Archived Notes</i>
-        <i class="icon arrow-icon"></i>
-      </div>
-    </div>
-  </aside>
 
-  <main>
-    <header>
-      <h1 class="header-title">All Notes</h1>
-
-      <div class="header-actions-container">
-        <div class="search-container">
-          <i class="icon search-icon"></i>
-          <input type="text" placeholder="Search by target, content or tags ...">
+      <div class="notes-button-container">
+        <div class="aside-button active">
+          <i class="icon home-icon"></i>
+          <i>All Notes</i>
+          <i class="icon arrow-icon"></i>
         </div>
 
-        <div class="dropdown-settings-container">
-          <div class="header-button js-settings-toggle">
-            <i class="icon settigs-icon icon--md"></i>
+        <div class="aside-button">
+          <i class="icon archive-icon"></i>
+          <i>Archived Notes</i>
+          <i class="icon arrow-icon"></i>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <header>
+        <h1 class="header-title">All Notes</h1>
+
+        <div class="header-actions-container">
+          <div class="search-container">
+            <i class="icon search-icon"></i>
+            <input
+              type="text"
+              placeholder="Search by target, content or tags ..."
+            />
           </div>
 
-          <div class="dropdown-settings js-settings-dropdown">
+          <div class="dropdown-settings-container">
+            <div class="header-button js-settings-toggle">
+              <i class="icon settigs-icon icon--md"></i>
+            </div>
+
+            <div class="dropdown-settings js-settings-dropdown">
               <div class="dropdown-button">
                 <i class="icon sun-icon"></i>
                 Color Theme
                 <i class="icon arrow-icon"></i>
-            </div>
-            <div class="dropdown-button">
-              <i class="icon font-icon"></i>
-              Color Theme
-              <i class="icon arrow-icon"></i>
-            </div>
-            <div class="dropdown-button">
-              <i class="icon lock-icon"></i>
-              Change Password
-              <i class="icon arrow-icon"></i>
-            </div>
-            <hr>
-            <div class="dropdown-button">
-              <i class="icon logout-icon"></i>
-              Logout
-              <i class="icon arrow-icon"></i>
+              </div>
+              <div class="dropdown-button">
+                <i class="icon font-icon"></i>
+                Color Theme
+                <i class="icon arrow-icon"></i>
+              </div>
+              <div class="dropdown-button">
+                <i class="icon lock-icon"></i>
+                Change Password
+                <i class="icon arrow-icon"></i>
+              </div>
+              <hr />
+              <div class="dropdown-button">
+                <i class="icon logout-icon"></i>
+                Logout
+                <i class="icon arrow-icon"></i>
+              </div>
             </div>
           </div>
+        </div>
+      </header>
+
+      <div class="main-container">
+        <div class="nots-list-container">
+          <div class="create-note-button js-create-note-button">
+            <i class="icon add-icon"></i>
+            Create New Note
+          </div>
+
+          <div class="no-notes-message js-no-notes-message">
+            <p>
+              You don't have any notes yet. Start a new note to capture your
+              thoughts and ideas.
+            </p>
+          </div>
+
+          <div class="notes js-note">
+            <!-- SCRIPT -->
+          </div>
+        </div>
+
+        <div class="note-container js-note-container">
+          <!-- Script -->
         </div>
       </div>
-    </header>
+    </main>
 
-    <div class="main-container">
-      <div class="nots-list-container">
-        <div class="create-note-button js-create-note-button">
-          <i class="icon add-icon"></i>
-          Create New Note
-        </div>
-
-        <div class="no-notes-message js-no-notes-message">
-          <p>You don't have any notes yet. Start a new note to capture your thoughts and ideas.</p>
-        </div>
-
-        <div class="notes js-note"> 
-          <!-- SCRIPT -->
-        </div>
-      </div>
-
-      <div class="note-container js-note-container">
-        <!-- <div class="note-content">
-          <div class="note-head">
-            <h2 class="note-title">React Performance Optimization</h2>
-            <div class="note-head-row tags-container">
-              <div>
-                <i class="icon tags-icon"></i>
-                Tags
-              </div>
-              <div class="note-tags-list">
-                Dev, React, Front-end
-              </div>
-            </div>
-            <div class="note-head-row date-container">
-              <div>
-                <i class="icon clock-icon"></i>
-                Last Edited
-              </div>
-              <div>
-                <time class="note-date" datetime="29/10/2024">29 Oct 2024</time>
-              </div>
-            </div>
-          </div>
-          <div class="note-body">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit distinctio eligendi voluptate amet repudiandae nesciunt cumque quo ab impedit commodi maxime, ad itaque laudantium incidunt reprehenderit magni unde, autem repellat.
-          </div>
-        </div>
-
-        <div class="note-options-sidebar">
-          <div class="note-option-button">
-            <i class="icon archive-icon"></i>
-            Archive Note
-          </div>
-          <div class="note-option-button">
-            <i class="icon delete-icon"></i>
-            Delete Note
-          </div>
-        </div> -->
-
-      </div>
-    </div>
-  </main>
-  
-  <script type="module" src="./scripts/index.js"></script>
-</body>
+    <script type="module" src="./scripts/index.js"></script>
+  </body>
 </html>

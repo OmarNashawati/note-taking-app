@@ -1,4 +1,4 @@
-@import url('../Fonts/fonts.css');
+@import url("../Fonts/fonts.css");
 
 :root {
   /* Neutral colors from design system */
@@ -7,25 +7,25 @@
   --neutral-800: hsl(231, 16%, 16%);
   --neutral-700: hsl(221, 16%, 20%);
   --neutral-600: hsl(222, 11%, 36%);
-  --neutral-500: hsl(221, 8% ,48%);
+  --neutral-500: hsl(221, 8%, 48%);
   --neutral-400: hsl(220, 11%, 64%);
-  --neutral-300: hsl(219,15% ,82%);
+  --neutral-300: hsl(219, 15%, 82%);
   --neutral-200: hsl(216, 19%, 90%);
   --neutral-100: hsl(216, 20%, 96%);
   --neutral-50: hsl(216, 33%, 97%);
   --neutral-0: hsl(0, 0%, 100%);
 
   /* Blue colors from design system - Dark Mode */
-  --blue-700: hsl(228, 70% ,48%);
+  --blue-700: hsl(228, 70%, 48%);
   --blue-500: hsl(228, 100%, 60%);
   --blue-50: hsl(222, 100%, 96%);
 
   /* Green colors from design system - Dark Mode */
-  --green-500: hsl(148, 71% ,44%);
-  --green-100: hsl(154, 84% ,90%);
+  --green-500: hsl(148, 71%, 44%);
+  --green-100: hsl(154, 84%, 90%);
 
   /* Red colors from design system - Dark Mode */
-  --red-500: hsl(355, 96% ,60%);
+  --red-500: hsl(355, 96%, 60%);
   --red-100: hsl(356, 100%, 92%);
 
   /* Status colors - Light Mode */
@@ -39,12 +39,14 @@
   /* Shadows */
   --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
   --shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0px 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-inner: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
-
 }
 
 [data-theme="light"] {
@@ -78,10 +80,12 @@
   --ring: hsl(228 100% 60%);
 
   /* icon filters */
-  --base-filter: invert(9%) sepia(31%) saturate(998%) hue-rotate(169deg) brightness(90%) contrast(96%);
-  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%) contrast(114%);;
-  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%) contrast(101%);
-
+  --base-filter: invert(9%) sepia(31%) saturate(998%) hue-rotate(169deg)
+    brightness(90%) contrast(96%);
+  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg)
+    brightness(102%) contrast(114%);
+  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg)
+    brightness(112%) contrast(101%);
 }
 
 [data-theme="dark"] {
@@ -115,12 +119,13 @@
   --ring: hsl(228 100% 60%);
 
   /* icon filters */
-  --base-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%) contrast(101%);
-  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%) contrast(114%);;
-  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%) contrast(101%);
+  --base-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg)
+    brightness(112%) contrast(101%);
+  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg)
+    brightness(102%) contrast(114%);
+  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg)
+    brightness(112%) contrast(101%);
 }
-
-
 
 *,
 *::before,
@@ -148,7 +153,6 @@ body {
   flex-direction: row;
 }
 
-
 .icon {
   display: inline-block;
   padding: 10px;
@@ -158,62 +162,68 @@ body {
   filter: var(--base-filter);
 }
 
-.icon--sm {background-size: 15px;}
-.icon--md {background-size: 20px;}
-.icon--lg {background-size: 25px;}
+.icon--sm {
+  background-size: 15px;
+}
+.icon--md {
+  background-size: 20px;
+}
+.icon--lg {
+  background-size: 25px;
+}
 
 .home-icon {
-  background-image: url('../images/icon-home.svg');
+  background-image: url("../images/icon-home.svg");
 }
 
 .settigs-icon {
-  background-image: url('../images/icon-settings.svg');
+  background-image: url("../images/icon-settings.svg");
 }
 
 .arrow-icon {
-  background-image: url('../images/icon-arrow-left.svg');
+  background-image: url("../images/icon-arrow-left.svg");
   transform: rotate(180deg);
   margin-left: auto;
 }
 
 .archive-icon {
-  background-image: url('../images/icon-archive.svg');
+  background-image: url("../images/icon-archive.svg");
 }
 
 .search-icon {
-  background-image: url('../images/icon-search.svg');
+  background-image: url("../images/icon-search.svg");
 }
 
 .add-icon {
-  background-image: url('../images/icon-plus.svg');
+  background-image: url("../images/icon-plus.svg");
 }
 
 .clock-icon {
-  background-image: url('../images/icon-clock.svg');
+  background-image: url("../images/icon-clock.svg");
 }
 
 .tags-icon {
-  background-image: url('../images/icon-tag.svg');
+  background-image: url("../images/icon-tag.svg");
 }
 
 .delete-icon {
-  background-image: url('../images/icon-delete.svg');
+  background-image: url("../images/icon-delete.svg");
 }
 
 .sun-icon {
-  background-image: url('../images/icon-sun.svg');
+  background-image: url("../images/icon-sun.svg");
 }
 
 .font-icon {
-  background-image: url('../images/icon-font.svg');
+  background-image: url("../images/icon-font.svg");
 }
 
 .lock-icon {
-  background-image: url('../images/icon-lock.svg');
+  background-image: url("../images/icon-lock.svg");
 }
 
 .logout-icon {
-  background-image: url('../images/icon-logout.svg');
+  background-image: url("../images/icon-logout.svg");
 }
 
 .show {

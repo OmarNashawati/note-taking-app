@@ -48,8 +48,8 @@ const notes = [
 
 export const getNotes = () => {
   return notes;
-}
+};
 
 export const getNote = (id) => {
-  return notes.find(n => n.id === Number(id));
-}
+  return notes.find((n) => n.id === Number(id));
+};

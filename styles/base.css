@@ -234,6 +234,13 @@ body {
   display: none;
 }
 
+.line-seperator {
+  /* flex: 0 0 auto; */
+  height: 1px;
+  width: 100%;
+  background-color: var(--muted);
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

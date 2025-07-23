@@ -46,7 +46,12 @@ const notes = [
   },
 ];
 
-export const getNotes = () => {
+export const getNotes = (filter) => {
+  if (filter) {
+    let filteredList = notes.filter((note) => note.isArchived);
+    return filteredList;
+  }
+
   return notes;
 };
 

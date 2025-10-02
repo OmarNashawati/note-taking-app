@@ -1,0 +1,153 @@
+@import url('@/assets/Fonts/fonts.css');
+
+:root {
+  /* Neutral colors from design system */
+  --neutral-950: hsl(222, 32%, 8%);
+  --neutral-900: hsl(230, 19%, 12%);
+  --neutral-800: hsl(231, 16%, 16%);
+  --neutral-700: hsl(221, 16%, 20%);
+  --neutral-600: hsl(222, 11%, 36%);
+  --neutral-500: hsl(221, 8%, 48%);
+  --neutral-400: hsl(220, 11%, 64%);
+  --neutral-300: hsl(219, 15%, 82%);
+  --neutral-200: hsl(216, 19%, 90%);
+  --neutral-100: hsl(216, 20%, 96%);
+  --neutral-50: hsl(216, 33%, 97%);
+  --neutral-0: hsl(0, 0%, 100%);
+
+  /* Blue colors from design system - Dark Mode */
+  --blue-700: hsl(228, 70%, 48%);
+  --blue-500: hsl(228, 100%, 60%);
+  --blue-50: hsl(222, 100%, 96%);
+
+  /* Green colors from design system - Dark Mode */
+  --green-500: hsl(148, 71%, 44%);
+  --green-100: hsl(154, 84%, 90%);
+
+  /* Red colors from design system - Dark Mode */
+  --red-500: hsl(355, 96%, 60%);
+  --red-100: hsl(356, 100%, 92%);
+
+  /* Status colors - Light Mode */
+  --success: hsl(142 72% 29%);
+  --success-foreground: hsl(210 20% 98%);
+  --warning: hsl(38 92% 50%);
+  --warning-foreground: hsl(210 20% 98%);
+  --info: hsl(217 91% 60%);
+  --info-foreground: hsl(210 20% 98%);
+
+  /* Shadows */
+  --shadow-sm: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  --shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0px 10px 15px -3px rgba(0, 0, 0, 0.1), 0px 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme='light'] {
+  /* Base colors - Light Mode */
+  --background: var(--neutral-0);
+  --text: hsl(222 47% 11%);
+
+  /* Primary colors - Light Mode (using blue) */
+  --primary: var(--blue-500);
+  --primary-foreground: var(--neutral-0);
+
+  /* Secondary colors - Light Mode */
+  --secondary: hsl(220 14% 96%);
+  --secondary-foreground: hsl(222 47% 11%);
+
+  /* Muted colors - Light Mode */
+  --muted: hsl(220 14% 96%);
+  --muted-foreground: hsl(220 9% 46%);
+
+  /* Accent colors - Light Mode */
+  --accent: hsl(220 14% 96%);
+  --accent-foreground: hsl(222 47% 11%);
+
+  /* Destructive colors - Light Mode */
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(210 20% 98%);
+
+  /* Border and input colors - Light Mode */
+  --border: hsl(220 13% 91%);
+  --input: hsl(220 13% 91%);
+  --ring: hsl(228 100% 60%);
+
+  /* icon filters */
+  --base-filter: invert(9%) sepia(31%) saturate(998%) hue-rotate(169deg) brightness(90%)
+    contrast(96%);
+  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%)
+    contrast(114%);
+  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%)
+    contrast(101%);
+}
+
+[data-theme='dark'] {
+  /* Base colors - Light Mode */
+  --background: hsl(222 47% 11%);
+  --text: hsl(210 20% 98%);
+
+  /* Primary colors - Light Mode (using blue) */
+  --primary: var(--blue-500);
+  --primary-foreground: var(--neutral-0);
+
+  /* Secondary colors - Light Mode */
+  --secondary: hsl(217 33% 17%);
+  --secondary-foreground: hsl(210 20% 98%);
+
+  /* Muted colors - Light Mode */
+  --muted: hsl(217 33% 17%);
+  --muted-foreground: hsl(215 20% 65%);
+
+  /* Accent colors - Light Mode */
+  --accent: hsl(217 33% 17%);
+  --accent-foreground: hsl(210 20% 98%);
+
+  /* Destructive colors - Light Mode */
+  --destructive: hsl(0 62% 30%);
+  --destructive-foreground: hsl(210 20% 98%);
+
+  /* Border and input colors - Light Mode */
+  --border: hsl(217 33% 17%);
+  --input: hsl(217 33% 17%);
+  --ring: hsl(228 100% 60%);
+
+  /* icon filters */
+  --base-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%)
+    contrast(101%);
+  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%)
+    contrast(114%);
+  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%)
+    contrast(101%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--text);
+  font-size: 14px;
+  font-family: sans-serif;
+  background: var(--background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  flex-direction: row;
+}

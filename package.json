@@ -13,13 +13,17 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-    "vue": "^3.5.22"
+    "pinia": "^3.0.3",
+    "uuid": "^13.0.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.5.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.1",
     "prettier": "3.6.2",
     "sass": "^1.93.2",
     "vite": "^7.1.7",
-    "vite-plugin-vue-devtools": "^8.0.2"
+    "vite-plugin-vue-devtools": "^8.0.2",
+    "vite-svg-loader": "^5.1.0"
   }
 }

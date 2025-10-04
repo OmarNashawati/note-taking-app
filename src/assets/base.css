@@ -44,6 +44,8 @@
   --shadow-xl: 0px 20px 25px -5px rgba(0, 0, 0, 0.1), 0px 10px 10px -5px rgba(0, 0, 0, 0.04);
   --shadow-2xl: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
   --shadow-inner: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+
+  --border-radius: 0.2rem;
 }
 
 [data-theme='light'] {
@@ -75,14 +77,6 @@
   --border: hsl(220 13% 91%);
   --input: hsl(220 13% 91%);
   --ring: hsl(228 100% 60%);
-
-  /* icon filters */
-  --base-filter: invert(9%) sepia(31%) saturate(998%) hue-rotate(169deg) brightness(90%)
-    contrast(96%);
-  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%)
-    contrast(114%);
-  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%)
-    contrast(101%);
 }
 
 [data-theme='dark'] {
@@ -114,14 +108,6 @@
   --border: hsl(217 33% 17%);
   --input: hsl(217 33% 17%);
   --ring: hsl(228 100% 60%);
-
-  /* icon filters */
-  --base-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%)
-    contrast(101%);
-  --primary-filter: invert(19%) sepia(99%) saturate(4707%) hue-rotate(242deg) brightness(102%)
-    contrast(114%);
-  --on-primary-filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(21deg) brightness(112%)
-    contrast(101%);
 }
 
 *,

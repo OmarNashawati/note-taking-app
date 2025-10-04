@@ -1,76 +1,13 @@
 @import './base.css';
 
 .icon {
-  display: inline-block;
-  padding: 10px;
-  background-size: 15px;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: var(--base-filter);
+  color: var(--text);
 }
 
-.icon--sm {
-  background-size: 15px;
-}
-.icon--md {
-  background-size: 20px;
-}
-.icon--lg {
-  background-size: 25px;
-}
-
-.home-icon {
-  background-image: url('../images/icon-home.svg');
-}
-
-.settigs-icon {
-  background-image: url('../images/icon-settings.svg');
-}
-
-.arrow-icon {
-  background-image: url('../images/icon-arrow-left.svg');
-  transform: rotate(180deg);
-  margin-left: auto;
-}
-
-.archive-icon {
-  background-image: url('../images/icon-archive.svg');
-}
-
-.search-icon {
-  background-image: url('../images/icon-search.svg');
-}
-
-.add-icon {
-  background-image: url('../images/icon-plus.svg');
-}
-
-.clock-icon {
-  background-image: url('../images/icon-clock.svg');
-}
-
-.tags-icon {
-  background-image: url('../images/icon-tag.svg');
-}
-
-.delete-icon {
-  background-image: url('../images/icon-delete.svg');
-}
-
-.sun-icon {
-  background-image: url('../images/icon-sun.svg');
-}
-
-.font-icon {
-  background-image: url('../images/icon-font.svg');
-}
-
-.lock-icon {
-  background-image: url('../images/icon-lock.svg');
-}
-
-.logout-icon {
-  background-image: url('../images/icon-logout.svg');
+textarea,
+input {
+  background: none;
+  color: var(--text);
 }
 
 .show {
@@ -106,4 +43,8 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
+}
+
+.invert-icon {
+  transform: rotate(180deg);
 }

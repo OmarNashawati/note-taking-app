@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Module from '@/components/Module.vue'
 import NavigationBar from '@/components/NavigationBar.vue'
 import ShowSection from '@/components/ShowSection.vue'
 </script>

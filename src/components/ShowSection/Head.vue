@@ -99,6 +99,7 @@ header {
         color: var(--text);
       }
     }
+
     .header-button {
       height: 40px;
       width: 40px;

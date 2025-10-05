@@ -6,6 +6,7 @@ import MoonIcon from '@/assets/icons/icon-moon.svg'
 import FontIcon from '@/assets/icons/icon-font.svg'
 import LockIcon from '@/assets/icons/icon-lock.svg'
 import SettingsIcon from '@/assets/icons/icon-settings.svg'
+import SearchIcon from '@/assets/icons/icon-search.svg'
 import LogoutIcon from '@/assets/icons/icon-logout.svg'
 import ArrowIcon from '@/assets/icons/icon-arrow-left.svg'
 import DeleteIcon from '@/assets/icons/icon-delete.svg'
@@ -18,10 +19,20 @@ import Notes from '@/components/ShowSection/Notes.vue'
 import { getNotes } from '@/services/notesService'
 import { useMobileNavigation } from '@/stores/mobileNavigation'
 import { useSettings } from '@/stores/settings'
+import { computed, ref } from 'vue'
 
 const settings = useSettings()
 const navigation = useMobileNavigation()
 const notes = getNotes()
+const searchQuery = ref('')
+const searchResult = computed(() =>
+  notes.filter(
+    (n) =>
+      searchQuery.value !== '' &&
+      (n.title.toLowerCase().includes(searchQuery.value) ||
+        n.note.toLowerCase().includes(searchQuery.value)),
+  ),
+)
 </script>
 
 <template>
@@ -60,7 +71,21 @@ const notes = getNotes()
       <Note />
     </div>
 
-    <div v-if="navigation.value === 'search'">Search</div>
+    <div v-if="navigation.value === 'search'" class="search-fragment">
+      <div class="search-container">
+        <SearchIcon class="icon" />
+        <input
+          type="text"
+          v-model="searchQuery"
+          placeholder="Search by target, content or tags ..."
+        />
+      </div>
+
+      <Notes
+        :notes="searchResult"
+        :empty-list-message="searchQuery ? 'No matching notes found.' : 'Search for notes'"
+      />
+    </div>
 
     <div v-if="navigation.value === 'archive'" class="archive-fragment">
       <Notes :notes="notes.filter((n) => n.isArchived)" />
@@ -199,6 +224,32 @@ main {
         display: flex;
         align-items: center;
         gap: 8px;
+      }
+    }
+  }
+
+  .search-fragment {
+    padding: 1rem;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .search-container {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--border);
+      border-radius: var(--border-radius);
+      gap: 10px;
+      padding: 0 10px;
+
+      & > input {
+        flex: 1 1 auto;
+        border: none;
+        outline: none;
+        background: none;
+        height: 40px;
+        color: var(--text);
       }
     }
   }

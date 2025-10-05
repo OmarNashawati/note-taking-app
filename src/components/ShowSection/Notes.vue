@@ -3,7 +3,7 @@ import NoteCard from './NoteCard.vue'
 import { useNote } from '@/stores/Note'
 import { useMobileNavigation } from '@/stores/mobileNavigation'
 
-const props = defineProps(['notes'])
+const props = defineProps(['notes', 'emptyListMessage'])
 const noteStore = useNote()
 const navigation = useMobileNavigation()
 
@@ -16,7 +16,12 @@ function showDetails(note) {
 <template>
   <div class="notes-wrapper">
     <div v-if="!notes.length" class="no-notes-message">
-      <p>You don't have any notes yet. Start a new note to capture your thoughts and ideas.</p>
+      <p>
+        {{
+          emptyListMessage ||
+          "You don't have any notes yet. Start a new note to capture your thoughts and ideas."
+        }}
+      </p>
     </div>
 
     <div v-if="notes.length" class="notes">

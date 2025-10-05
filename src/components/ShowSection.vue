@@ -34,6 +34,7 @@ const notes = computed(() => {
             Create New Note
           </div>
         </div>
+
         <Notes :notes="notes" />
       </div>
 
